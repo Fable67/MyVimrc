@@ -8,6 +8,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasiser/vim-code-dark'
 
 Plug 'tpope/vim-fugitive'
+
+Plug 'voldikss/vim-floaterm'
+
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " vim-airline
@@ -16,6 +20,11 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " vim-airline-theme + vim-code-dark
 let g:airline_theme = 'codedark'
+
+" vim-floaterm
+let g:floaterm_keymap_toggle = '<F8>'
+let g:floaterm_keymap_prev = '<F7>'
+let g:floaterm_keymap_next = '<F9>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
