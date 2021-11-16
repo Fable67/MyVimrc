@@ -304,7 +304,7 @@ set laststatus=0
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap <Esc> in insert mode to not move one char to the left
-inoremap <Esc> <Esc>l
+" inoremap <Esc> <Esc>l
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
