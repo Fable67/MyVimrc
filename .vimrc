@@ -203,8 +203,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
@@ -304,7 +304,8 @@ set laststatus=0
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap <Esc> in insert mode to not move one char to the left
-inoremap <Esc> <Esc>l
+" TODO: Currently not working due to bug when moving with arrow keys in insert mode
+" inoremap <Esc> <Esc>l
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
