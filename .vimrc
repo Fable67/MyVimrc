@@ -10,6 +10,16 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-commentary'
+
+Plug 'wincent/terminus'
+
+Plug 'xavierd/clang_complete'
+
+Plug 'dyng/ctrlsf.vim'
+
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 " vim-airline
@@ -18,6 +28,9 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " vim-airline-theme + vim-code-dark
 let g:airline_theme = 'codedark'
+
+" clang_complete
+let g:clang_library_path='/opt/homebrew/opt/llvm/lib'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -44,6 +57,7 @@ let g:airline_theme = 'codedark'
 "    -> Editing mappings
 "    -> vimgrep searching and cope displaying
 "    -> Spell checking
+"    -> Style checking
 "    -> Misc
 "    -> Helper functions
 "
@@ -303,6 +317,10 @@ set laststatus=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Add new line in normal mode
+nnoremap <Leader>o o<Esc>0"_D
+nnoremap <Leader>O O<Esc>0"_D
+
 " Remap <Esc> in insert mode to not move one char to the left
 " TODO: Currently not working due to bug when moving with arrow keys in insert mode
 " inoremap <Esc> <Esc>l
@@ -347,6 +365,16 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+
+map <leader>sde :set spelllang=de_de<cr>
+map <leader>sen :set spelllang=en_ue<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Style checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-K> :py3f /opt/homebrew/share/clang/clang-format.py<cr>
+imap <C-K> <c-o>:py3f /opt/homebrew/share/clang/clang-format.py<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
